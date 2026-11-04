@@ -1,0 +1,132 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* The transparent outline stays visible in forced-colors mode, which drops box-shadow. */
+.button:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--border-focus) 32%, transparent);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  width: var(--space-16);
+  height: var(--space-16);
+}
+
+.icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Font sizes come from Figma text styles, which are not exported as tokens yet. */
+.sm {
+  gap: var(--space-6);
+  padding: var(--space-8) var(--space-12);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.md {
+  gap: var(--space-8);
+  padding: var(--space-12) var(--space-16);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.lg {
+  gap: var(--space-8);
+  padding: var(--space-12) var(--space-20);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.primary {
+  background: var(--button-primary-bg-default);
+  color: var(--button-primary-text);
+}
+
+.primary:hover:enabled {
+  background: var(--button-primary-bg-hover);
+}
+
+.primary:active:enabled {
+  background: var(--button-primary-bg-active);
+}
+
+.primary:disabled {
+  background: var(--button-primary-bg-disabled);
+  color: var(--button-primary-text-disabled);
+}
+
+.secondary {
+  border: 1px solid var(--button-secondary-border);
+  background: var(--button-secondary-bg-default);
+  color: var(--button-secondary-text);
+}
+
+.secondary:hover:enabled {
+  background: var(--button-secondary-bg-hover);
+}
+
+.secondary:active:enabled {
+  background: var(--button-secondary-bg-active);
+}
+
+.secondary:disabled {
+  border-color: var(--border-subtle);
+  color: var(--text-disabled);
+}
+
+.ghost {
+  color: var(--button-ghost-text);
+}
+
+.ghost:hover:enabled {
+  background: var(--button-ghost-bg-hover);
+}
+
+.ghost:active:enabled {
+  background: var(--action-secondary-active);
+}
+
+.ghost:disabled {
+  color: var(--text-disabled);
+}
+
+.danger {
+  background: var(--button-danger-bg-default);
+  color: var(--button-danger-text);
+}
+
+.danger:hover:enabled {
+  background: var(--button-danger-bg-hover);
+}
+
+.danger:active:enabled {
+  background: var(--button-danger-bg-active);
+}
+
+.danger:focus-visible {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--button-danger-bg-default) 32%, transparent);
+}
+
+.danger:disabled {
+  background: var(--button-primary-bg-disabled);
+  color: var(--text-disabled);
+}

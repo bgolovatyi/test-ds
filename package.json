@@ -29,6 +29,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/browser-playwright": "latest",
     "@vitest/coverage-v8": "latest",
+    "chromatic": "^18.14.0",
     "oxlint": "^1.89.0",
     "playwright": "latest",
     "storybook": "^10.6.5",
